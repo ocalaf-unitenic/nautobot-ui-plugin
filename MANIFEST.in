@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include nautobot_ui_plugin/templates *
+recursive-include nautobot_ui_plugin/static *
