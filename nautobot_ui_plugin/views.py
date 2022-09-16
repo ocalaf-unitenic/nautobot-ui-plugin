@@ -1,6 +1,7 @@
 #!./venv/bin/python
 
 from django.shortcuts import render
+from django.views.decorators.clickjacking import xframe_options_sameorigin
 from django.views.generic import View
 from nautobot.dcim.models import Cable, Device, Interface, DeviceRole
 from nautobot.ipam.models import VLAN
@@ -484,7 +485,7 @@ class TopologyView(PermissionRequiredMixin, View):
     queryset = Device.objects.all()
     filterset = filters.TopologyFilterSet
     template_name = 'nautobot_ui_plugin/topology.html'
-
+    @xframe_options_sameorigin
     def get(self, request):
 
         if not request.GET:
