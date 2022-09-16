@@ -8,40 +8,40 @@ General installation steps and considerations follow the [official guidelines](h
 
 ### Package Installation from PyPi
 
-Assuming you use a Virtual Environment for Netbox:
+Assuming you use a Virtual Environment for Nautobot:
 ```
 $ source /opt/netbox/venv/bin/activate
-(venv) $ pip3 install nextbox-ui-plugin
+(venv) $ pip3 install nautobot-ui-plugin
 ```
 
 ### Package Installation from Source Code
 The source code is available on [GitHub](https://github.com/iDebugAll/nextbox-ui-plugin).<br/>
-Download and install the package. Assuming you use a Virtual Environment for Netbox:
+Download and install the package. Assuming you use a Virtual Environment for Nautobot:
 ```
-$ git clone https://github.com/iDebugAll/nextbox-ui-plugin
-$ cd nextbox-ui-plugin
+$ git clone https://github.com/ocalaf-unitenic/nautobot-ui-plugin/nautobot-ui-plugin
+$ cd nautobot-ui-plugin
 $ source /opt/netbox/venv/bin/activate
 (venv) $ pip3 install .
 ```
 
-To ensure NextBox UI plugin is automatically re-installed during future upgrades, create a file named `local_requirements.txt` (if not already existing) in the NetBox root directory (alongside `requirements.txt`) and list the `nextbox-ui-plugin` package:
+To ensure NextBox UI plugin is automatically re-installed during future upgrades, create a file named `local_requirements.txt` (if not already existing) in the NetBox root directory (alongside `requirements.txt`) and list the `nautobot-ui-plugin` package:
 
 ```no-highlight
-# echo nextbox-ui-plugin >> local_requirements.txt
+# echo nautobot-ui-plugin >> local_requirements.txt
 ```
 
 ### Enable the Plugin
 In a global Netbox **configuration.py** configuration file, update or add PLUGINS parameter:
 ```python
 PLUGINS = [
-    'nextbox_ui_plugin',
+    'nautobot_ui_plugin',
 ]
 ```
 
 Optionally, update a PLUGINS_CONFIG parameter in **configuration.py** to rewrite default plugin behavior:
 ```python
 #PLUGINS_CONFIG = {
-#    'nextbox_ui_plugin': {
+#    'nautobot_ui_plugin': {
 #        'layers_sort_order': (
 #            ADD YOUR SETTINGS HERE
 #            layer_sort_order is a tuple
@@ -108,7 +108,7 @@ By default, the Plugin orders devices on a visualized topology based their roles
 ```
 
 By default, the Plugin automatically tries to identify the device icon type based on following logic:
-1. 'icon_{icon_type}' tag in the Netbox Device tags.
+1. 'icon_{icon_type}' tag in the Nautobot Device tags.
    Assign a tag to the device to manually control the displayed icon type (e.g. 'icon_router' or 'icon_switch').
    Supported icon types:
 ```
@@ -232,8 +232,8 @@ The Plugin may be installed in a Netbox Docker deployment.
 The package contains a Dockerfile for [Netbox-Community Docker](https://github.com/netbox-community/netbox-docker) extension. Latest-LDAP version is used by default as a source.<br/>
 Download the Plugin and build from the source:
 ```
-$ git clone https://github.com/iDebugAll/nextbox-ui-plugin
-$ cd nextbox-ui-plugin
+$ git clone https://github.com/ocalaf-unitenic/nautobot-ui-plugin/
+$ cd nautobot-ui-plugin
 $ docker build -t netbox-custom .
 ```
 Update a netbox image name in **docker-compose.yml** in a Netbox Community Docker project root:
@@ -246,11 +246,11 @@ Update a **configuration.py**. It is stored in netbox-docker/configuration/ by d
 
 Rebuild the running docker containers:
 ```
-$ cd netbox-docker
+$ cd nautobot-compose-docker
 $ docker-compose down
 $ docker-compose up -d
 ```
-Netbox Community Docker setup performs static file collection and database migrations on every startup. No manual actions are required.
+Nautobot Community Docker setup performs static file collection and database migrations on every startup. No manual actions are required.
 
 # Fixing Common Installation and Post-Upgrade Issues
 
