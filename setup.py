@@ -6,8 +6,8 @@ with open(path.join(top_level_directory, 'README.md'), encoding='utf-8') as file
     long_description = file.read()
 
 setup(
-    name='nautobot_ui_plugin_unitecnic',
-    version='0.10.2',
+    name='nautobot_ui_plugin_docker',
+    version='0.0.1',
     url='https://gitlab-ce.gwdg.de/gwdg-netz/nautobot-plugins/nautobot-ui-plugin/',
     # download_url='https://github.com/iDebugAll/nextbox-ui-plugin/archive/v0.9.2.tar.gz',
     description='A topology visualization plugin for Nautobot powered by NextUI Toolkit.',
