@@ -364,6 +364,8 @@ Nautobot server can now be accessed at [http://localhost:8080](http://localhost:
 
 #### Docker Development Environment
 
+**NOTE: Use WSL remote developement on Windows.**
+
 This project is managed by [Python Poetry](https://python-poetry.org/) and has a few requirements to setup your development environment:
 
 1. Install Poetry, see the [Poetry Documentation](https://python-poetry.org/docs/#installation) for your operating system.
@@ -374,7 +376,14 @@ Once you have Poetry and Docker installed you can run the following commands to 
 ```shell
 poetry shell
 poetry install
+```
+And then:
+```shell
 invoke start
+```
+Or this build debug target that instructs invoke to follow the container logs in the running terminal
+```shell
+invoke build debug
 ```
 
 Nautobot server can now be accessed at [http://localhost:8080](http://localhost:8080).
