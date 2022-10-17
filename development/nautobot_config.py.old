@@ -111,4 +111,5 @@ PLUGINS = ["nautobot_ui_plugin_docker"]
 #    }
 #}
 
+STATIC_ROOT=os.path.join(NAUTOBOT_ROOT, "static")
 NAUTOBOT_ENFORCE_GLOBAL_UNIQUE=True

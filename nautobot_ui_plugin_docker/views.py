@@ -117,7 +117,7 @@ DEFAULT_ICON_ROLE_MAP = {
 }
 
 
-PLUGIN_SETTINGS = settings.PLUGINS_CONFIG.get("nautobot_ui_plugin", dict())
+PLUGIN_SETTINGS = settings.PLUGINS_CONFIG.get("nautobot_ui_plugin_docker", dict())
 
 MANUAL_LAYERS_SORT_ORDER = PLUGIN_SETTINGS.get("layers_sort_order", "")
 LAYERS_SORT_ORDER = MANUAL_LAYERS_SORT_ORDER or DEFAULT_LAYERS_SORT_ORDER
@@ -484,7 +484,7 @@ class TopologyView(PermissionRequiredMixin, View):
     permission_required = ('dcim.view_site', 'dcim.view_device', 'dcim.view_cable')
     queryset = Device.objects.all()
     filterset = filters.TopologyFilterSet
-    template_name = 'nautobot_ui_plugin/topology.html'
+    template_name = 'nautobot_ui_plugin_docker/topology.html'
     @xframe_options_sameorigin
     def get(self, request):
 
@@ -542,4 +542,4 @@ class TopologyView(PermissionRequiredMixin, View):
 
 
 class SiteTopologyView(TopologyView):
-    template_name = 'nautobot_ui_plugin/site_topology.html'
+    template_name = 'nautobot_ui_plugin_docker/site_topology.html'

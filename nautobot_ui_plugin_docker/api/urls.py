@@ -7,5 +7,5 @@ router.APIRootView = views.NautobotUIPluginRootView
 
 router.register(r'nautobotsavedtopologies', views.NautobotSavedTopologyViewSet)
 
-app_name = "nautobot_ui_plugin-api"
+app_name = "nautobot_ui_plugin_docker-api"
 urlpatterns = router.urls

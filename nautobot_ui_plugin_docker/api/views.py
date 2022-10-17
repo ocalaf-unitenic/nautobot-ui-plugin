@@ -1,6 +1,6 @@
 from rest_framework.routers import APIRootView
 from rest_framework.viewsets import ModelViewSet
-from nautobot_ui_plugin.models import NautobotSavedTopology
+from nautobot_ui_plugin_docker.models import NautobotSavedTopology
 from . import serializers
 
 

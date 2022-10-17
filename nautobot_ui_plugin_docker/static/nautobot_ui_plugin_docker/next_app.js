@@ -76,7 +76,7 @@
         linkInstanceClass: 'CustomLinkClass'
     });
     
-    topo.registerIcon("dead_node", "/static/nautobot_ui_plugin/img/dead_node.png", 49, 49);
+    topo.registerIcon("dead_node", "/static/nautobot_ui_plugin_docker/img/dead_node.png", 49, 49);
     
     var Shell = nx.define(nx.ui.Application, {
         methods: {

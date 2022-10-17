@@ -10,7 +10,7 @@ class SiteTopologyButtons(PluginTemplateExtension):
     model = 'dcim.site'
 
     def buttons(self):
-        return self.render('nautobot_ui_plugin/site_topo_button.html')
+        return self.render('nautobot_ui_plugin_docker/site_topo_button.html')
 
 
 # PluginTemplateExtension subclasses must be packaged into an iterable named

@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "nautobot-ui-plugin"
+name = "nautobot-ui-plugin-docker"
 version = "0.10.11"
 description = "Nautobot UI Plugin"
-authors = ["<netzadmin@gwdg.de>"]
+authors = ["Oscar Calaf <ocalaf@unitecnic.com>"]
 
 license = "Apache-2.0"
 
@@ -21,8 +21,6 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.7"
 nautobot = "^1.2.0"
-nautobot-ssot = "^1.0.1"
-cloudvision = "1.4.4"
 
 [tool.poetry.dev-dependencies]
 invoke = "*"

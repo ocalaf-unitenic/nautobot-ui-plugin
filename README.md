@@ -34,14 +34,14 @@ To ensure NextBox UI plugin is automatically re-installed during future upgrades
 In a global Netbox **configuration.py** configuration file, update or add PLUGINS parameter:
 ```python
 PLUGINS = [
-    'nautobot_ui_plugin',
+    'nautobot_ui_plugin_docker',
 ]
 ```
 
 Optionally, update a PLUGINS_CONFIG parameter in **configuration.py** to rewrite default plugin behavior:
 ```python
 #PLUGINS_CONFIG = {
-#    'nautobot_ui_plugin': {
+#    'nautobot_ui_plugin_docker': {
 #        'layers_sort_order': (
 #            ADD YOUR SETTINGS HERE
 #            layer_sort_order is a tuple

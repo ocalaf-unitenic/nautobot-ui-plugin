@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from nautobot_ui_plugin.models import NautobotSavedTopology
+from nautobot_ui_plugin_docker.models import NautobotSavedTopology
 import datetime
 import json
 
