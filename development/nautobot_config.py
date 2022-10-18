@@ -112,3 +112,4 @@ PLUGINS = ["nautobot_ui_plugin_docker"]
 #}
 
 NAUTOBOT_ENFORCE_GLOBAL_UNIQUE=True
+NAUTOBOT_HIDE_RESTRICTED_UI=True

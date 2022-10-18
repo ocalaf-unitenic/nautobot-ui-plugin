@@ -7,7 +7,7 @@ with open(path.join(top_level_directory, 'README.md'), encoding='utf-8') as file
 
 setup(
     name='nautobot_ui_plugin_docker',
-    version='0.10.15',
+    version='0.10.16',
     url='https://gitlab-ce.gwdg.de/gwdg-netz/nautobot-plugins/nautobot-ui-plugin/',
     # download_url='https://github.com/iDebugAll/nextbox-ui-plugin/archive/v0.9.2.tar.gz',
     description='A topology visualization plugin for Nautobot powered by NextUI Toolkit.',

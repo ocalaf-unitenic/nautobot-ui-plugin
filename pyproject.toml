@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nautobot-ui-plugin-docker"
-version = "0.10.15"
+version = "0.10.16"
 description = "Nautobot UI Plugin"
 authors = ["Oscar Calaf <ocalaf@unitecnic.com>"]
 

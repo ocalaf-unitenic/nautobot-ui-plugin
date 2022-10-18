@@ -5,6 +5,6 @@ menu_items = (
         link="plugins:nautobot_ui_plugin_docker:topology",
         link_text="Topology Viewer",
         buttons=(),
-        permissions=[],
+        permissions=["nautobot_ui_plugin_docker.view_topology"],
     ),
 )
