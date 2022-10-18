@@ -426,6 +426,13 @@ Each command can be executed with `invoke <command>`. Environment variables `INV
   unittest         Run Django unit tests for the plugin.
 ```
 
+# Publishing Python Package
+Remember to change the version in the corresponding files before publishing a new release and python package:
+- ```pyproject.toml```
+- ```setup.py```
+- ```/nautobot_ui_plugin_docker/__init__.py```
+
+
 ## Questions
 
 For any questions or comments, please check the [FAQ](FAQ.md) first and feel free to swing by the [Network to Code slack channel](https://networktocode.slack.com/) (channel #networktocode).
